@@ -1,87 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
+<meta name="monetag" content="d31ad996af6560aab6f6c025c947baae">    
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CYBER SECURITY 67</title>
+<title>Cyber Security 67 Team</title>
 
 <style>
 body{
     margin:0;
     background:#000;
-    color:#00ff66;
-    font-family:Arial, sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+    color:#00ff88;
+    font-family:Arial,sans-serif;
 }
-
-.container{
-    width:90%;
-    max-width:800px;
-    border:2px solid #00ff66;
-    padding:25px;
+header{
     text-align:center;
-    box-shadow:0 0 20px #00ff66;
-    animation:glow 2s infinite alternate;
+    padding:30px;
+    background:#111;
+    border-bottom:2px solid #00ff88;
 }
-
 h1{
     font-size:40px;
-    margin:0;
-    text-shadow:0 0 15px #00ff66;
+    text-shadow:0 0 15px #00ff88;
 }
-
-h2{
-    color:#00ffff;
+.container{
+    width:90%;
+    margin:auto;
 }
-
-p{
-    line-height:1.8;
-    color:#ffffff;
+.card{
+    background:#111;
+    margin:20px 0;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid #00ff88;
+    box-shadow:0 0 15px #00ff88;
 }
-
-.footer{
-    margin-top:20px;
-    color:#00ff66;
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:6px;
+    background:#00ff88;
+    color:#000;
     font-weight:bold;
+    cursor:pointer;
 }
-
-@keyframes glow{
-    from{box-shadow:0 0 10px #00ff66;}
-    to{box-shadow:0 0 30px #00ff66;}
+button:hover{
+    background:#00ffaa;
+}
+footer{
+    text-align:center;
+    padding:20px;
+    border-top:2px solid #00ff88;
+    margin-top:30px;
 }
 </style>
 </head>
 
 <body>
 
+<header>
+<h1>CYBER SECURITY 67 TEAM</h1>
+<p>Knowledge • Awareness • Digital Security</p>
+</header>
+
 <div class="container">
 
-<h1>CYBER SECURITY 67</h1>
-
-<h2>Founder: Cyber Shakil</h2>
-
+<div class="card">
+<h2>📌 আমাদের সম্পর্কে</h2>
 <p>
-Welcome to <b>CYBER SECURITY 67</b>.<br><br>
-
-Our mission is to promote cybersecurity awareness,
-ethical learning, online safety, and responsible use
-of technology.
+Cyber Security 67 Team একটি শিক্ষামূলক প্ল্যাটফর্ম।
+এখানে সাইবার নিরাপত্তা, অনলাইন নিরাপত্তা, ডিজিটাল সচেতনতা,
+এবং বিভিন্ন প্রযুক্তিগত বিষয় সম্পর্কে তথ্য শেয়ার করা হয়।
 </p>
+</div>
 
-<p>
-<b>Cyber Shakil</b> is presented here as the founder of
-CYBER SECURITY 67 and encourages learning,
-digital security awareness, and ethical practices.
-</p>
+<div class="card">
+<h2>🛡 আমাদের সেবা</h2>
+<ul>
+<li>Cyber Security Awareness</li>
+<li>Online Safety Tips</li>
+<li>Password Security Guide</li>
+<li>Phishing সম্পর্কে সচেতনতা</li>
+<li>Social Media Security</li>
+<li>Digital Privacy Guide</li>
+<li>Cyber News</li>
+<li>Educational Resources</li>
+</ul>
+</div>
 
-<div class="footer">
-© 2026 CYBER SECURITY 67 | Cyber Shakil
+<div class="card">
+<h2>🔐 Password Generator</h2>
+
+<button onclick="pass()">Generate Password</button>
+
+<h3 id="password"></h3>
+</div>
+
+<div class="card">
+<h2>📊 Security Status</h2>
+
+<progress value="95" max="100"></progress>
+<p>System Security: 95%</p>
+
+<progress value="90" max="100"></progress>
+<p>Network Protection: 90%</p>
+
+<progress value="98" max="100"></progress>
+<p>Awareness Level: 98%</p>
+
+</div>
+
+<div class="card">
+<h2>💻 Cyber Tips</h2>
+
+<p>✅ শক্তিশালী পাসওয়ার্ড ব্যবহার করুন।</p>
+<p>✅ Two-Factor Authentication চালু রাখুন।</p>
+<p>✅ অপরিচিত লিংকে ক্লিক করবেন না।</p>
+<p>✅ সফটওয়্যার নিয়মিত আপডেট করুন।</p>
+<p>✅ ব্যক্তিগত তথ্য নিরাপদ রাখুন।</p>
+
+</div>
+
+<div class="card">
+<h2>📈 Live Clock</h2>
+
+<h2 id="clock"></h2>
+
+</div>
+
+<div class="card">
+<h2>📩 যোগাযোগ</h2>
+
+<p>Email: cybersecurity67@example.com</p>
+<p>Facebook: Cyber Security 67 Team</p>
+<p>Telegram: @CyberSecurity67</p>
+
 </div>
 
 </div>
+
+<footer>
+
+<h3>© 2026 Cyber Security 67 Team</h3>
+
+</footer>
+
+<script>
+
+function pass(){
+
+let chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&";
+
+let p="";
+
+for(let i=0;i<16;i++){
+
+p+=chars.charAt(Math.floor(Math.random()*chars.length));
+
+}
+
+document.getElementById("password").innerHTML=p;
+
+}
+
+function clock(){
+
+let d=new Date();
+
+document.getElementById("clock").innerHTML=d.toLocaleTimeString();
+
+}
+
+setInterval(clock,1000);
+
+</script>
 
 </body>
 </html>
